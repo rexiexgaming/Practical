@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathoMatch - منصة الباثولوجي التفاعلية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-wrapper">
+            <h1>PathoMatch</h1>
+            <img src="images/logo.png" alt="Winner Academy Logo" class="site-logo">
+        </div>
+        
+        <p class="subtitle">منصة تفاعلية لتقييم وصياغة الشروح الباثولوجية</p>
+
+        <div class="image-container image-protection-wrapper">
+            <img id="slideImage" src="" alt="شريحة باثولوجي">
+            <div class="watermark-text">WINNER ACADEMY</div>
+            <div class="glass-shield"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="prevSlide()">⬅️ الشريحة السابقة</button>
+            <button class="nav-btn" onclick="nextSlide()">الشريحة التالية ➡️</button>
+        </div>
+
+        <textarea id="userDescription" placeholder="اكتب وصف الشريحة هنا بالإنجليزية..."></textarea>
+        
+        <button class="action-btn" onclick="checkDescription()">التحقق من صحة الوصف</button>
+
+        <div id="resultBox" class="result-box"></div>
+        
+    </div>
+    <footer class="site-footer">
+        <p>© 2026 PathoMatch | Developed by Mohammed Omer | Powered by WINNER ACADEMY. All Rights Reserved.</p>
+        
+        <div style="margin-top: 12px;">
+            <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fwinneracademy.github.io%2FPathology&label=&icon=github&color=%23198754&message=&style=flat&tz=UTC" alt="Hits Counter" style="border: none; max-width: 110px; height: auto;">
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+</body></html>

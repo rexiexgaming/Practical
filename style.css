@@ -1,0 +1,410 @@
+/* ضبط الصفحة الأساسية وترتيب العناصر عمودياً بالمنتصف */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px 10px;
+    display: flex !important;
+    flex-direction: column !important; /* ترتيب عمودي: الحاوية أولاً ثم الحقوق أسفلها */
+    align-items: center !important;    /* تمركز كل شيء في منتصف الشاشة */
+    justify-content: flex-start !important;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* الحاوية الرئيسية للموقع - متناسقة ومتوسطة في الشاشة */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    margin: 0 auto !important; /* إجبار الحاوية على التوسط */
+}
+
+/* منطقة الهيدر (الاسم والشعار) */
+.header-wrapper {
+    display: flex !important;
+    justify-content: space-between !important; /* الاسم يسار والشعار يمين */
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 15px !important;
+}
+
+/* عنوان الموقع */
+h1 {
+    color: #1e4e79;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* ضبط حجم ومظهر الشعار الدائري بجانب الاسم */
+.header-wrapper .site-logo {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+    pointer-events: none;
+    display: block !important;
+}
+
+/* السطر التوضيحي */
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* صندوق الصور المحمي */
+.image-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+}
+
+/* شريحة الباثولوجي */
+#slideImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* حاوية أزرار التنقل */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* أزرار التنقل */
+.nav-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* خانة الإجابات (من اليسار لليمين للمصطلحات الطبية) */
+textarea, input {
+    width: 100%;
+    box-sizing: border-box;
+    direction: ltr !important;
+    text-align: left !important;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* زر التحقق */
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e4e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* سطر حقوق النشر - مجبر على الهبوط أسفل الصندوق الأبيض بالكامل */
+.site-footer {
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    padding: 15px 0 !important;
+    font-size: 11px !important;
+    color: #888 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+/* ضبط عنوان الموقع لكي لا يأخذ مساحة ضخمة */
+h1 {
+    color: #1e4e79;
+    margin: 0;
+    font-size: 24px; /* حجم مناسب للموبايل */
+}
+
+/* تنسيق الشعار في أقصى اليمين */
+.site-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    pointer-events: none;
+}
+
+/* ضبط السطر التوضيحي */
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* صندوق الصور المحمي (يأخذ مكانه الطبيعي بالوسط) */
+.image-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+}
+
+/* جعل شريحة الباثولوجي مرنة وتملأ الصندوق تماماً دون خروج */
+#slideImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* حاوية أزرار التنقل لكي تصبح أسفل الصورة ومرتبة أفقياً */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* تنسيق أزرار التنقل */
+.nav-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* خانة الإجابات (تأخذ سطر مستقل وتكتب من اليسار لليمين للمصطلحات الطبية) */
+textarea, input {
+    width: 100%;
+    box-sizing: border-box;
+    direction: ltr !important;
+    text-align: left !important;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* زر التحقق من صحة الوصف */
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e4e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.nav-btn {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    font-size: 14px;
+}
+.nav-btn:hover {
+    background-color: #616a6b;
+}
+textarea {
+    width: 100%;
+    height: 90px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 15px;
+}
+.action-btn {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+.action-btn:hover {
+    background-color: #285e8e;
+}
+.result-box {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 10px;
+    background: #eef2f5;
+    border-radius: 8px;
+    display: none;
+}
+/* منع ظهور قائمة الحفظ وتحديد الصور */
+img {
+    -webkit-touch-callout: none; /* يمنع القائمة المنسدلة في الآيفون */
+    -webkit-user-select: none;   /* يمنع تحديد الصورة */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;        /* يمنع المتصفح من التعامل مع الصورة كعنصر قابل للضغط أو السحب */
+}
+/* إجبار خانة الإجابات على الكتابة من اليسار إلى اليمين */
+input, textarea {
+    direction: ltr !important;
+    text-align: left !important;
+}
+/* صندوق الحماية الرئيسي */
+.image-protection-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* تنسيق العلامة المائية المطبوعة في منتصف الصورة */
+.watermark-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg); /* تدوير النص بشكل احترافي */
+    color: rgba(255, 255, 255, 0.25); /* لون أبيض شفاف جداً */
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    pointer-events: none; /* يمنع التفاعل مع النص */
+    z-index: 5;
+}
+
+/* الطبقة الزجاجية الشفافة فوق كل شيء */
+.glass-shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 10;
+}
+
+
+
+
+/* صندوق حماية الصور الرئيسي */
+.image-protection-wrapper {
+    position: relative; /* ضرورية لكي يتحرك الشعار والطبقات بناءً على أبعاد هذا الصندوق فقط */
+    display: inline-block;
+}
+
+/* 1. تحديث صندوق الصور للسماح للشعار بالخروج فوقه */
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: visible !important; /* الأمر السحري: يسمح للشعار بالظهور خارج حدود الصندوق دون أن ينقص */
+    margin-top: 70px;            /* إعطاء مساحة فارغة مريحة فوق الصندوق لكي يجلس فيها الشعار براحته */
+}
+
+/* إجبار الشعار على اتخاذ حجم صغير وأنيق بجانب اسم الموقع */
+.header-wrapper .site-logo {
+    width: 50px !important;       /* حجم الشعار (يمكنك تعديله حسب رغبتك) */
+    height: 50px !important;
+    min-width: 50px !important;   /* منع المتصفح من تغيير حجمه تحت أي ظرف */
+    min-height: 50px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important; /* لجعله دائرياً بشكل مميز */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important; /* ظل خفيف */
+    pointer-events: none;
+    display: block !important;
+}
+
+/* تأكيد تنسيق الهيدر ليكون مرناً ومقسماً بشكل صحيح */
+.header-wrapper {
+    display: flex !important;
+    justify-content: space-between !important; /* اسم الموقع يساراً والشعار يميناً */
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 15px !important;
+}
+
+/* التعديل النهائي لسطر حقوق النشر لضمان نزوله أسفل الصندوق الأبيض */
+.site-footer {
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 30px !important; /* مسافة تفصله عن قاع الصندوق الأبيض */
+    padding: 15px 0 !important;
+    font-size: 11px !important;
+    color: #888 !important; /* لون رمادي هادئ */
+    position: relative !important; /* إلغاء أي تداخلات قديمة */
+    z-index: 1 !important;
+}
+
+/* تعديل بسيط على الـ body لترتيب الحاوية والحقوق عمودياً تحت بعضهما */
+body {
+    display: flex !important;
+    flex-direction: column !important; /* ترتيب العناصر عمودياً: الموقع أولاً ثم الحقوق أسفله */
+    align-items: center !important;    /* تمركز كل شيء في منتصف الشاشة تماماً */
+    justify-content: flex-start !important;
+    padding: 20px 10px !important;
+}
+
+
